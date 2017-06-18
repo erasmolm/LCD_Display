@@ -16,34 +16,29 @@
 #include <inttypes.h>
 #include "LCD_STM_Pin_Configurator.h"
 
-typedef enum { false, true } bool;
-typedef enum { COMM_REG_SEL, DATA_REG_SEL} RS_flag;
-typedef enum { EN_LOW, EN_HIGH} EN_flag;
-typedef enum { SH_RIGHT, SH_LEFT} shift_dir;
-
 /*
- * @brief Mapping dei pin del display sulle porte GPIO.
- * 	Questa configurazione può essere modificata per
- * 	rimappare i pin su porte GPIO differenti.
- * */
-#define RS_PIN			(GPIOPort_TypeDef){GPIOC,GPIO_PIN_4}
-#define EN_PIN			(GPIOPort_TypeDef){GPIOB,GPIO_PIN_13}
-#define D4_PIN			(GPIOPort_TypeDef){GPIOB,GPIO_PIN_14}
-#define D5_PIN			(GPIOPort_TypeDef){GPIOB,GPIO_PIN_15}
-#define D6_PIN			(GPIOPort_TypeDef){GPIOB,GPIO_PIN_1}
-#define D7_PIN			(GPIOPort_TypeDef){GPIOB,GPIO_PIN_2}
+* @brief Mapping delle funzioni di basso livello.
+* 		 Da modificare per un altro device (ad es. ZYBO).
+* */
+#define LCD_PIN_Init(conf)			__LCD_STM_PIN_Init(conf)
+#define LCD_PIN_Write(prt,val)		__LCD_STM_PIN_Write(prt,val)
+
+typedef enum { false, true } bool;					/*!< tipo booleano*/
+typedef enum { COMM_REG_SEL, DATA_REG_SEL} RS_flag;	/*!< selezione registro istruzione-dato*/
+typedef enum { EN_LOW, EN_HIGH} EN_flag;			/*!< valore basso-alto pin di ENABLE*/
+typedef enum { SH_RIGHT, SH_LEFT} shift_dir;		/*!< direzione di shift destra-sinistra*/
 
 /*
  * @brief Mapping delle funzioni di basso livello.
  * */
-#define LCD_PIN_Init(conf)			__LCD_STM_PIN_Init(conf)
-#define LCD_PIN_Write(prt,val)		__LCD_STM_PIN_Write(prt,val)
+#define LCD_PIN_Init(conf)			__LCD_STM_PIN_Init(conf)	/*!< funzione di inizializzazione generica*/
+#define LCD_PIN_Write(prt,val)		__LCD_STM_PIN_Write(prt,val)/*!< funzione di scrittura su pin generica*/
 
 /*
  * @brief Function Set
  * */
-#define LCD_FS_1L		0x20	/*!< Modalità 1 riga*/
-#define LCD_FS_2L		0x28	/*!< Modalità 2 righe*/
+#define LCD_FS_1L		0x20	/*!< ModalitÃ  1 riga*/
+#define LCD_FS_2L		0x28	/*!< ModalitÃ  2 righe*/
 
 /*
  * @brief Cursor Set
