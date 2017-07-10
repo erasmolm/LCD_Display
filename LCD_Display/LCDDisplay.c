@@ -14,7 +14,7 @@
 
 /**
   * @brief  Scrive un valore sul pin RS del display
-  * @param 	RS_pin_state: indirizzo base del registro
+  * @param 	RS_pin_state: valore del pin Register Select
   *   Questo parametro può assumere i seguenti valori:
   *     @arg COMM_REG_SEL (0)
   *     @arg DATA_REG_SEL (1)
@@ -25,6 +25,7 @@ void LCD_RS_write(RS_flag RS_pin_state){
 
 /**
   * @brief  Genera un impulso ALTO-BASSO sul pin EN
+  * @param 	None
   */
 void LCD_pulse_EN(){
 	LCD_PIN_Write(EN_PIN,EN_HIGH);

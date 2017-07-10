@@ -13,7 +13,7 @@
 #include "LCD_STM_Pin_Configurator.h"
 
 /**
-  * @brief  Data una configurazione, inizializza tutti i porti necessari,
+  * @brief  Data una configurazione, inizializza tutti i porti necessari
   * 		e ne abilita il clock.
   * @param 	conf: struttura dati con la configurazione dei pin,
   */
