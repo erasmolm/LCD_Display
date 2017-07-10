@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    gpgpio.c
-  * @author  Pierluigi,Alfonso,Erasmo
+  * @author  Pierluigi,Alfonso,Erasmo (APE)
   * @version V1.0
   * @date    11-Jun-2017
   * @brief   Questo file implementa le funzioni di basso livello

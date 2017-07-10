@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    gpgpio.c
-  * @author  Pierluigi,Alfonso,Erasmo
+  * @author  Pierluigi,Alfonso,Erasmo (APE)
   * @version V1.0
   * @date    11-Jun-2017
   * @brief   Questo file definisce le principali funzioni di controllo per il
@@ -16,8 +16,7 @@
 #include <inttypes.h>
 #include "LCD_STM_Pin_Configurator.h"
 
-/*
-* @brief Mapping delle funzioni di basso livello.
+/** @brief Mapping delle funzioni di basso livello.
 * 		 Da modificare per un altro device (ad es. ZYBO).
 * */
 #define LCD_PIN_Init(conf)			__LCD_STM_PIN_Init(conf)
@@ -77,11 +76,12 @@ typedef enum { SH_RIGHT, SH_LEFT} shift_dir;		/*!< direzione di shift destra-sin
 #define D5_MASK			(uint8_t)0x1	<< D5_POS
 #define D4_MASK			(uint8_t)0x1	<< D4_POS
 
-/*
- * @brief Struttura dati display
- * */
+
 typedef struct display_t display_t;
 
+/**
+  * @brief tipo display_t.
+  **/
 struct display_t{
 	void(*printChar)(uint8_t data);
 	void(*printString)(char* string);

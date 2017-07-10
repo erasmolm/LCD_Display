@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    gpgpio.c
-  * @author  Pierluigi,Alfonso,Erasmo
+  * @author  Pierluigi,Alfonso,Erasmo (APE)
   * @version V1.0
   * @date    11-Jun-2017
   * @brief   Questo file definisce le funzioni di basso livello
@@ -20,7 +20,7 @@ typedef struct GPIOPort_TypeDef GPIOPort_TypeDef;
 typedef struct PinConfig_TypeDef PinConfig_TypeDef;
 
 /**
-  * @brief tipo di dato astratto GPIOPort_TypeDef per il singolo porto GPIO.
+  * @brief tipo GPIOPort_TypeDef per il singolo porto GPIO.
   **/
 typedef struct GPIOPort_TypeDef{
 	GPIO_TypeDef* letter;
@@ -40,7 +40,7 @@ typedef struct GPIOPort_TypeDef{
 #define D7_PIN			(GPIOPort_TypeDef){GPIOB,GPIO_PIN_2}
 
 /**
-  * @brief tipo di dato astratto PinConfig_TypeDef per gestire la configurazione
+  * @brief tipo PinConfig_TypeDef per gestire la configurazione
   * 	   dei pin del display.
   **/
 struct PinConfig_TypeDef{
