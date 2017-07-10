@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    gpgpio.c
+  * @file    LCD_STM_Pin_Configurator.h
   * @author  Pierluigi,Alfonso,Erasmo (APE)
   * @version V1.0
   * @date    11-Jun-2017

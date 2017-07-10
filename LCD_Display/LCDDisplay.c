@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    gpgpio.c
+  * @file    LCDDisplay.c
   * @author  Pierluigi,Alfonso,Erasmo (APE)
   * @version V1.0
   * @date    11-Jun-2017
