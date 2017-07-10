@@ -27,7 +27,7 @@ typedef struct GPIOPort_TypeDef{
 	uint16_t pin_number;
 }GPIOPort_TypeDef;
 
-/*
+/**
  * @brief Mapping dei pin del display sulle porte GPIO.
  * 	Questa configurazione può essere modificata per
  * 	rimappare i pin su porte GPIO differenti.
