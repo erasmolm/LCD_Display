@@ -27,26 +27,26 @@ typedef enum { COMM_REG_SEL, DATA_REG_SEL} RS_flag;	/*!< selezione registro istr
 typedef enum { EN_LOW, EN_HIGH} EN_flag;			/*!< valore basso-alto pin di ENABLE*/
 typedef enum { SH_RIGHT, SH_LEFT} shift_dir;		/*!< direzione di shift destra-sinistra*/
 
-/*
+/**
  * @brief Mapping delle funzioni di basso livello.
  * */
 #define LCD_PIN_Init(conf)			__LCD_STM_PIN_Init(conf)	/*!< funzione di inizializzazione generica*/
 #define LCD_PIN_Write(prt,val)		__LCD_STM_PIN_Write(prt,val)/*!< funzione di scrittura su pin generica*/
 
-/*
+/**
  * @brief Function Set
  * */
 #define LCD_FS_1L		0x20	/*!< Modalità 1 riga*/
 #define LCD_FS_2L		0x28	/*!< Modalità 2 righe*/
 
-/*
+/**
  * @brief Cursor Set
  * */
 #define LCD_CURSOR_OFF		0x0C	/*!< Cursore non visibile*/
 #define LCD_ENCUR_NOBLNK	0x0E	/*!< Cursore visibile non intermittente*/
 #define LCD_ENCUR_BLNK		0x0F	/*!< Cursore visibile intermittente*/
 
-/*
+/**
  * @brief Entry Mode Set
  * */
 #define LCD_EM_DEC_MVCUR	0x04	/*!< Display fermo, cursore mobile a decremento*/
@@ -54,13 +54,13 @@ typedef enum { SH_RIGHT, SH_LEFT} shift_dir;		/*!< direzione di shift destra-sin
 #define LCD_EM_INC_MVCUR	0x06	/*!< Display fermo, cursore mobile a incremento*/
 #define LCD_EM_INC_MVDIS	0x07	/*!< Cursore fermo, display mobile a incremento*/
 
-/*
+/**
  * @brief Maschere di accesso a dati
  * */
 #define LCD_DATA_HIGH_MASK	0xF0	/*!< Parte alta*/
 #define LCD_DATA_LOW_MASK	0x0F	/*!< Parte bassa*/
 
-/*
+/**
  * @brief Posizione pin dati
  * */
 #define D7_POS			3
